@@ -1,53 +1,82 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 5px;
+    background-color: rgb(218, 231, 231);
+    background-color: #ffffff;
+    background-image: url("../imagenes/fondo-textura-acuarela-azul-pintado-mano_1035-23285.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+}
+
 header {
     display: flex;
     border: 1px solid black;
-    width: 100%;
+    border-radius: 35px;
+    width: 99%;
     height: 100px;
-    background-color: rgb(26, 228, 235);
+    background-color: rgb(16, 113, 224);
     justify-content: space-between;
-        
+    padding: 10px;
+    align-items: center;
 }
 
 
 nav {
     height: 100px;
     display: flex;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     justify-content: end;
     align-items: center;
-  
-   
+
+
 }
 
-nav >ul {
+nav>ul {
     list-style: none;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-content: center;
-    
-}
-
-nav >ul >li {
-    align-items: center; 
 
 }
 
+nav>ul>li {
+    align-items: center;
 
-nav >ul >li >a {
+}
+
+
+nav>ul>li>a {
     text-decoration: none;
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    background-color: black;
+    background-color: rgb(26, 105, 119);
+    justify-content: space-between;
     margin: 10px;
-    
-   
+
+
 }
 
-header >h1 {
-    margin-left: 200px;
+header>h1 {
+    color: white;
+    border-color: black;
     align-content: center;
 
+
 }
 
+logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoImagen {
+    height: 100px;
+    justify-content: left;
+
+}
