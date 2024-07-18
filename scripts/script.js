@@ -1,18 +1,19 @@
-/*let ofertasNombres = new Array("Promo Cafecito", "Promo Almuerzo","Promo Merienda");
+const ofertasNombres = ["Promo Cafecito", "Promo Almuerzo","Promo Merienda"]; 
 
-let ofertasDescripcion = new Array("Leche en polvo + Cafe Instantaneo x2 + Azucar","Arroz + Fideos x2 + Polenta","Galletitas a Eleccion + Chocolatada x 2");
+const ofertasDescripcion = ["Leche en polvo + Cafe Instantaneo x2 + Azucar","Arroz + Fideos x2 + Polenta","Galletitas a Eleccion + Chocolatada x 2"];
 
-let ofertasPrecios = new Array(10000,6000,7000);
+const ofertasPrecios = [10000,6000,7000];
 
-let ofertasImagenes = new Array("img1", "img2","img3");
+const ofertasImagenes = ["img1", "img2","img3"];
+
 console.log("hola")
-for (i=0;i>ofertasNombres.length;i++){
+for (let i=0;i<ofertasNombres.length;i++){
     console.log (ofertasNombres[i]);
     console.log (ofertasDescripcion[i]);
     console.log (ofertasPrecios[i]);
     console.log (ofertasImagenes[i]);
 }
-*/
+
 
 
 let btn = document.getElementById("btn");
