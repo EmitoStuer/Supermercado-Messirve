@@ -25,27 +25,21 @@ function cargarOfertas(nombre, descripcion, precio, imagen,descripcionImagen) {
     nuevoElementoImg.setAttribute("alt", descripcionImagen);
 
 
-    let nuevoElementoH1 = document.createElement("h2");
+    let nuevoElementoH2 = document.createElement("h2");
 
-    let textoElementoH1 = document.createTextNode(nombre);
+    let textoElementoH2 = document.createTextNode(nombre);
 
-    let nuevoElementoH2 = document.createElement("p");
+    let nuevoElementoPTexto = document.createElement("p");
 
-    let textoElementoH2 = document.createTextNode(descripcion);
+    let textoElementoHPTexto = document.createTextNode(descripcion);
 
-    let nuevoElementoP = document.createElement("p");
+    let nuevoElementoPPrecio = document.createElement("p");
 
-    let textoElementoP = document.createTextNode(`$ ${precio}`);
+    let nuevoElementoStrongPrecio = document.createElement("strong");
+
+    let textoElementoPPrecio = document.createTextNode(`$ ${precio}`);
 
     nuevoElementoDiv.appendChild(nuevoElementoImg);
-
-    contenedorOfertas.appendChild(nuevoElementoDiv);
-
-    nuevoElementoH1.appendChild(textoElementoH1);
-
-    nuevoElementoDiv.appendChild(nuevoElementoH1);
-
-    nuevoElementoDiv.setAttribute("class", "card");
 
     contenedorOfertas.appendChild(nuevoElementoDiv);
 
@@ -53,11 +47,21 @@ function cargarOfertas(nombre, descripcion, precio, imagen,descripcionImagen) {
 
     nuevoElementoDiv.appendChild(nuevoElementoH2);
 
+    nuevoElementoDiv.setAttribute("class", "card");
+
     contenedorOfertas.appendChild(nuevoElementoDiv);
 
-    nuevoElementoP.appendChild(textoElementoP);
+    nuevoElementoPTexto.appendChild(textoElementoHPTexto);
 
-    nuevoElementoDiv.appendChild(nuevoElementoP);
+    nuevoElementoDiv.appendChild(nuevoElementoPTexto);
+
+    contenedorOfertas.appendChild(nuevoElementoDiv);
+
+    nuevoElementoStrongPrecio.appendChild(textoElementoPPrecio);
+
+    nuevoElementoPPrecio.appendChild(nuevoElementoStrongPrecio);
+
+    nuevoElementoDiv.appendChild(nuevoElementoPPrecio);
 
     contenedorOfertas.appendChild(nuevoElementoDiv);
 
