@@ -95,7 +95,7 @@ header>h1 {
 }
 
 .ofertas {
-    height: 400px;
+    height: flex;
     width: 100%;
     border: 1px solid black;
     background-color: rgb(60, 123, 241);
@@ -105,8 +105,8 @@ header>h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-top: 30px;
-
+    padding-top: 20px;
+    align-content: space-around;
 }
 
 .historia {
@@ -199,6 +199,23 @@ footer {
     align-content: space-around;
     border-radius: 15px;
     padding-top: 10px;
+    margin-bottom: 20px;
+    border: 0.5px solid gray;
+}
+
+.cardProd{
+    background-color: rgb(0, 183, 255);
+    width: 19%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border: 0.5px solid gray;
 }
 
 .imagenesOfertas{
@@ -217,6 +234,32 @@ footer {
     color: black;
     width: 100%;
     text-align: center;
+}
+
+.card > img {
+    width: 80%;
+    height: 150px;
+}
+
+.cardProd > h2 {
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
+.cardProd > p {
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
+.cardProd > img {
+    width: 80%;
+    height: 150px;
+}
+
+.cardProd > input {
+    width: 40%;
 }
 
 .historia:hover {
