@@ -190,7 +190,7 @@ footer {
 }
 
 .card{
-    background-color: aqua;
+    background-color: rgb(0, 183, 255);
     width: 30%;
     height: 90%;
     display: flex;
