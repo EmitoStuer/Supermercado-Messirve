@@ -259,7 +259,21 @@ footer {
 }
 
 .cardProd > input {
-    width: 40%;
+    width: 35%;
+    border: 1px;
+    border-radius: 5px;
+}
+
+.cardProd > button{
+    width: 35%;
+    border: 0px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.cardProd > button:hover{
+    color: white;
+    background-color: gray;
 }
 
 .historia:hover {
