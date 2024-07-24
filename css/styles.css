@@ -302,3 +302,63 @@ footer {
 .historia:hover >p{
     visibility: visible;
 }
+
+.contenidoContacto {
+    height: 500px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: rgb(60, 123, 241);
+    margin-top: 2%;
+    border-radius: 50px;
+    opacity: 80%;
+    padding-top: 10px;
+    padding-left: 40px;
+    display: flex ;
+    flex-direction: column;
+    text-align: left;
+  
+}
+
+
+.cajaComentario { 
+
+    width: 70%;
+    height: 300px;
+    border: 1px solid black;
+    text-align:left;
+ 
+}
+
+
+
+.nombre { 
+
+    width: 10%;
+    height: 25px;
+    border: 1px solid black;
+ 
+}
+
+.apellido { 
+
+    width: 10%;
+    height: 25px;
+    border: 1px solid black;
+ 
+}
+
+.email { 
+
+    width: 10%;
+    height: 25px;
+    border: 1px solid black;
+ 
+}
+
+.botonEnviar { 
+
+    width: 6%;
+    height: 25px;
+    border: 1px solid black;
+}
+
