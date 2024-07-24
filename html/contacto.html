@@ -26,26 +26,32 @@
     </header>
  
     <main>
-        <div class="contenidoContacto">
-            
-
-            <label for="nombre">Nombre:</label>
-            <input class="nombre" type="text" id="nombre" placeholder="Nombre">
-
-            <label for="apellido">Apellido:</label>
-            <input class="apellido" type="text" id="apellido" placeholder="Apellido">
-
-            <label for="email">Correo Electronico:</label>
-            <input  class="email" type="email" id="email" placeholder="Correo Electronico">
-
+     
+    <div class="contenidoContacto">
+        <form action="Formulario">
+            <h2>Escribinos</h2>
+            <div  class="div">
+                <label for="nombre">Nombre:</label>
+                <input class="nombre" type="text" id="nombre" placeholder="Nombre">
+    
+                <label for="apellido">Apellido:</label>
+                <input class="apellido" type="text" id="apellido" placeholder="Apellido">
+            </div>
+            <div class="div">
+                <label for="email">Correo Electronico:</label>
+            <input  class="email" type="email" id="email" placeholder="Correo Electronico"> 
+            </div>
             <label for="mensaje">Envianos tu comentario:</label>
-            <input class="cajaComentario" type="text" id="Comentario" placeholder="Escribi tu comentario...">
-
-
-
-
-            <button class="botonEnviar" id="enviar">Enviar</button>
-        </div>
+            <div class="div">
+                
+                <input class="cajaComentario" type="text" id="comentario" placeholder="Escribi tu comentario...">
+                
+              
+            </div>
+            <button type="button" class="botonEnviar" id="enviar">Enviar</button>
+        </form>
+    </div>
+        
     
     </main>
     
@@ -59,8 +65,10 @@
 
     </footer>
 
-
-    <script src="./scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"
+    integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../scripts/scriptContacto.js"></script>
 </body>
 <!-- <body>
     <header>

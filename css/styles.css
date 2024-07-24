@@ -311,17 +311,29 @@ footer {
     margin-top: 2%;
     border-radius: 50px;
     opacity: 80%;
-    padding-top: 10px;
-    padding-left: 40px;
+    justify-content: center;
+    align-content: center;
     display: flex ;
-    flex-direction: column;
-    text-align: left;
-  
+    flex-wrap: nowrap;
+}
+
+form {
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content:left;
+    width: 80%;
+}
+.contenidoContacto .div{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
 }
 
 
 .cajaComentario { 
-
+    display: flex;
+    flex-wrap: wrap;
     width: 70%;
     height: 300px;
     border: 1px solid black;
@@ -333,26 +345,28 @@ footer {
 
 .nombre { 
 
-    width: 10%;
+    width: 30%;
     height: 25px;
     border: 1px solid black;
+    margin-left: 12px;
  
 }
 
 .apellido { 
 
-    width: 10%;
+    width: 30%;
     height: 25px;
     border: 1px solid black;
+    margin-left: 12px;
  
 }
 
 .email { 
 
-    width: 10%;
+    width: 60%;
     height: 25px;
     border: 1px solid black;
- 
+    margin-left: 15px;
 }
 
 .botonEnviar { 
