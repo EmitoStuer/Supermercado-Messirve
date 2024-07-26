@@ -12,10 +12,33 @@ const descripcionImagenes = ["Imagen de yerba", "Imagen de azucar", "Imagen de l
 
 for (let i = 0; i < nombreProductos.length; i++) {
     console.log(nombreProductos);
-    cargarOfertas(nombreProductos[i], descripcionProductos[i], preciosProductos[i], stockProductos[i], productosImagenes[i],descripcionImagenes[i])
-}
+    cargarOfertas(nombreProductos[i], descripcionProductos[i], preciosProductos[i], stockProductos[i], productosImagenes[i],descripcionImagenes[i],i)
+}   
+    let contenedorTotal = document.getElementById("ofertas");
+    let nuevoElementoDivFinal = document.createElement("div");
+        nuevoElementoDivFinal.setAttribute("class","total");
+    let total = 0;
+    let nuevoElementoH3 = document.createElement("h3");
+        nuevoElementoH3.setAttribute("id", "precioTotal");
+    let textoElementoH3 = document.createTextNode("Total: $"+total);
+    
+    nuevoElementoH3.appendChild(textoElementoH3);
+    nuevoElementoDivFinal.appendChild(nuevoElementoH3);
+    contenedorTotal.appendChild(nuevoElementoDivFinal);
 
-function cargarOfertas(nombre, descripcion, precio, stock, imagen, descripcionImagen) {
+    let nuevoElementoButtonComprar = document.createElement("button");
+    nuevoElementoButtonComprar.setAttribute("id", "comprar");
+    nuevoElementoButtonComprar.setAttribute("type", "submit");
+    let textoElementoButtonComprar = document.createTextNode("Comprar");
+    nuevoElementoButtonComprar.addEventListener("click",comprarProductos);
+
+    nuevoElementoButtonComprar.appendChild(textoElementoButtonComprar)
+    nuevoElementoDivFinal.appendChild(nuevoElementoButtonComprar);
+    contenedorTotal.appendChild(nuevoElementoDivFinal);
+
+    
+
+function cargarOfertas(nombre, descripcion, precio, stock, imagen, descripcionImagen, index) {
 
     let contenedorOfertas = document.getElementById("ofertas");
 
@@ -47,7 +70,11 @@ function cargarOfertas(nombre, descripcion, precio, stock, imagen, descripcionIm
         nuevoElementoInputStock.setAttribute("placeholder","Quedan: "+stock);
 
         let nuevoElementoButton = document.createElement("button");
+        nuevoElementoButton.setAttribute("id", "agregar");
+        nuevoElementoButton.setAttribute("data-id", index);
+        nuevoElementoButton.setAttribute("type", "button");
         let textoElementoButton = document.createTextNode("Agregar");
+        nuevoElementoButton.addEventListener("click",agregarProductos);
         
 
     nuevoElementoDiv.appendChild(nuevoElementoImg);
@@ -59,6 +86,7 @@ function cargarOfertas(nombre, descripcion, precio, stock, imagen, descripcionIm
     nuevoElementoDiv.appendChild(nuevoElementoH2);
 
     nuevoElementoDiv.setAttribute("class", "cardProd");
+    nuevoElementoDiv.setAttribute("id", index);
 
     contenedorOfertas.appendChild(nuevoElementoDiv);
 
@@ -87,3 +115,34 @@ function cargarOfertas(nombre, descripcion, precio, stock, imagen, descripcionIm
     contenedorOfertas.appendChild(nuevoElementoDiv);
 
 }
+
+function agregarProductos(e){
+    let btn = e.target;
+    let idProducto = btn.getAttribute("data-id");
+    let producto = document.getElementById(idProducto);
+    let inputSeleccionado = producto.querySelector("input");
+    let cantidadSeleccionada = inputSeleccionado.value;
+        let precioUnidad = preciosProductos[idProducto];
+        if (cantidadSeleccionada>0){
+
+            if (cantidadSeleccionada<=stockProductos[idProducto]){
+                stockProductos[idProducto]-=cantidadSeleccionada;
+                inputSeleccionado.setAttribute("placeholder",`Quedan: ${stockProductos[idProducto]}`);
+                total = total + (precioUnidad*cantidadSeleccionada);
+                let precioTotal = document.getElementById("precioTotal");
+                precioTotal.innerText= "Total: $"+total;
+                inputSeleccionado.value = "";
+            }else{
+                alert ("No hay stock suficiente")
+            }
+        }else{
+            alert("Ingrese cantidad Mayor que cero");
+    }
+
+}
+
+function comprarProductos(){
+    alert("Compra Exitosa, Total a pagar : "+total);
+}
+
+
