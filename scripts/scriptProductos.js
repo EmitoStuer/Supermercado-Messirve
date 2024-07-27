@@ -134,15 +134,18 @@ function agregarProductos(e){
                 inputSeleccionado.value = "";
             }else{
                 alert ("No hay stock suficiente")
+                inputSeleccionado.value = "";
             }
         }else{
             alert("Ingrese cantidad Mayor que cero");
+            inputSeleccionado.value = "";
     }
 
 }
 
 function comprarProductos(){
     alert("Compra Exitosa, Total a pagar : "+total);
+    window.location.href = "../index.html";
 }
 
 
