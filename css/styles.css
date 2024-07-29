@@ -374,6 +374,7 @@ form {
     height: 300px;
     border: 1px solid black;
     text-align:left;
+    
  
 }
 
@@ -405,6 +406,12 @@ form {
     margin-left: 15px;
 }
 
+.number {
+    width: 64.75%;
+    height: 25px;
+    border: 1px solid black;
+    margin-left: 15px;      
+}
 .botonEnviar { 
 
     width: 6%;
