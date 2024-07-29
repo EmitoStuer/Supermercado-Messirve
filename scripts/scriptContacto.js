@@ -19,4 +19,3 @@ function guardarDatos () {
 
     saveAs(blob, "contacto.txt");
 }
-

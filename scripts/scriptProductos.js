@@ -12,7 +12,7 @@ const descripcionImagenes = ["Imagen de yerba", "Imagen de azucar", "Imagen de l
 
 for (let i = 0; i < nombreProductos.length; i++) {
     console.log(nombreProductos);
-    cargarOfertas(nombreProductos[i], descripcionProductos[i], preciosProductos[i], stockProductos[i], productosImagenes[i],descripcionImagenes[i],i)
+    cargarOfertas(nombreProductos[i], descripcionProductos[i], preciosProductos[i], stockProductos[i], productosImagenes[i],descripcionImagenes[i],i);
 }   
     let contenedorTotal = document.getElementById("ofertas");
     let nuevoElementoDivFinal = document.createElement("div");
@@ -88,13 +88,13 @@ function cargarOfertas(nombre, descripcion, precio, stock, imagen, descripcionIm
     nuevoElementoDiv.setAttribute("class", "cardProd");
     nuevoElementoDiv.setAttribute("id", index);
 
-    contenedorOfertas.appendChild(nuevoElementoDiv);
+    // contenedorOfertas.appendChild(nuevoElementoDiv);
 
     nuevoElementoPTexto.appendChild(textoElementoHPTexto);
 
     nuevoElementoDiv.appendChild(nuevoElementoPTexto);
 
-    contenedorOfertas.appendChild(nuevoElementoDiv);
+    // contenedorOfertas.appendChild(nuevoElementoDiv);
 
     nuevoElementoStrongPrecio.appendChild(textoElementoPPrecio);
 
@@ -102,11 +102,11 @@ function cargarOfertas(nombre, descripcion, precio, stock, imagen, descripcionIm
 
     nuevoElementoDiv.appendChild(nuevoElementoPPrecio);
 
-    contenedorOfertas.appendChild(nuevoElementoDiv);
+    // contenedorOfertas.appendChild(nuevoElementoDiv);
 
     nuevoElementoDiv.appendChild(nuevoElementoInputStock);
 
-    contenedorOfertas.appendChild(nuevoElementoDiv);
+    // contenedorOfertas.appendChild(nuevoElementoDiv);
 
     nuevoElementoButton.appendChild(textoElementoButton);
 

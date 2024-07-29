@@ -364,20 +364,32 @@ form {
     width: 100%;
     justify-content: left;
     align-items: center;
+    align-content: flex-start;
+    
 }
 
 
-.cajaComentario { 
+.cajaComentario {
+     
     display: flex;
-    flex-wrap: wrap;
-    width: 70%;
-    height: 300px;
+    flex-wrap: nowrap;
+    width: 69%;
+    height: 200px;
     border: 1px solid black;
     text-align:left;
-    
- 
+    border-radius: 10px;
+    padding: 10px;
 }
 
+
+.cajaComentario::placeholder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: #999;
+   
+}
 
 
 .nombre { 
@@ -386,15 +398,17 @@ form {
     height: 25px;
     border: 1px solid black;
     margin-left: 12px;
- 
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 .apellido { 
 
-    width: 30%;
+    width: 29.3%;
     height: 25px;
     border: 1px solid black;
     margin-left: 12px;
+    border-radius: 10px;
  
 }
 
@@ -404,19 +418,22 @@ form {
     height: 25px;
     border: 1px solid black;
     margin-left: 15px;
+    border-radius: 10px;
 }
 
 .number {
     width: 64.75%;
     height: 25px;
     border: 1px solid black;
-    margin-left: 15px;      
+    margin-left: 15px;  
+    border-radius: 10px;    
 }
 .botonEnviar { 
 
     width: 6%;
     height: 25px;
     border: 1px solid black;
+    border-radius: 10px;
 }
 
 
