@@ -11,7 +11,6 @@ const productosImagenes = ["../imagenes/yerba.jpg", "../imagenes/azucar.jpg", ".
 const descripcionImagenes = ["Imagen de yerba", "Imagen de azucar", "Imagen de leche", "Imagen de huevos", "Imagen de pan rallado", "Imagen de mermelada", "Imagen de queso cremoso", "Imagen de facturas", "Imagen de galletitas", "Imagen de pan", "Imagen de jpg", "Imagen de agua saborizada", "Imagen de cerveza"];
 
 for (let i = 0; i < nombreProductos.length; i++) {
-    console.log(nombreProductos);
     cargarOfertas(nombreProductos[i], descripcionProductos[i], preciosProductos[i], stockProductos[i], productosImagenes[i],descripcionImagenes[i],i);
 }   
     let contenedorTotal = document.getElementById("ofertas");
@@ -42,13 +41,15 @@ function cargarOfertas(nombre, descripcion, precio, stock, imagen, descripcionIm
 
     let contenedorOfertas = document.getElementById("ofertas");
 
-    let nuevoElementoDiv = document.createElement("div");
+    let card = document.createElement("div");
+        card.setAttribute("class", "cardProd");
+        card.setAttribute("id", index);
 
-    let nuevoElementoImg = document.createElement("img");
-
-    nuevoElementoImg.setAttribute("class", "imagenesOfertas");
-    nuevoElementoImg.setAttribute("src", imagen);
-    nuevoElementoImg.setAttribute("alt", descripcionImagen);
+    
+    let elementoImagen = document.createElement("img");
+        elementoImagen.setAttribute("class", "imagenesOfertas");
+        elementoImagen.setAttribute("src", imagen);
+        elementoImagen.setAttribute("alt", descripcionImagen);
 
 
     let nuevoElementoH2 = document.createElement("h2");
@@ -77,42 +78,29 @@ function cargarOfertas(nombre, descripcion, precio, stock, imagen, descripcionIm
         nuevoElementoButton.addEventListener("click",agregarProductos);
         
 
-    nuevoElementoDiv.appendChild(nuevoElementoImg);
-
-    contenedorOfertas.appendChild(nuevoElementoDiv);
+        card.appendChild(elementoImagen);
 
     nuevoElementoH2.appendChild(textoElementoH2);
 
-    nuevoElementoDiv.appendChild(nuevoElementoH2);
-
-    nuevoElementoDiv.setAttribute("class", "cardProd");
-    nuevoElementoDiv.setAttribute("id", index);
-
-    // contenedorOfertas.appendChild(nuevoElementoDiv);
+    card.appendChild(nuevoElementoH2);
 
     nuevoElementoPTexto.appendChild(textoElementoHPTexto);
 
-    nuevoElementoDiv.appendChild(nuevoElementoPTexto);
-
-    // contenedorOfertas.appendChild(nuevoElementoDiv);
+    card.appendChild(nuevoElementoPTexto);
 
     nuevoElementoStrongPrecio.appendChild(textoElementoPPrecio);
 
     nuevoElementoPPrecio.appendChild(nuevoElementoStrongPrecio);
 
-    nuevoElementoDiv.appendChild(nuevoElementoPPrecio);
+    card.appendChild(nuevoElementoPPrecio);
 
-    // contenedorOfertas.appendChild(nuevoElementoDiv);
-
-    nuevoElementoDiv.appendChild(nuevoElementoInputStock);
-
-    // contenedorOfertas.appendChild(nuevoElementoDiv);
+    card.appendChild(nuevoElementoInputStock);
 
     nuevoElementoButton.appendChild(textoElementoButton);
 
-    nuevoElementoDiv.appendChild(nuevoElementoButton);
+    card.appendChild(nuevoElementoButton);
 
-    contenedorOfertas.appendChild(nuevoElementoDiv);
+    contenedorOfertas.appendChild(card);
 
 }
 
@@ -144,7 +132,7 @@ function agregarProductos(e){
 }
 
 function comprarProductos(){
-    alert("Compra Exitosa, Total a pagar : "+total);
+    alert("Compra Exitosa, Total a pagar : $"+total);
     window.location.href = "../index.html";
 }
 
