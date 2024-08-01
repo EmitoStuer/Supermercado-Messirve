@@ -1,4 +1,4 @@
-const nombreProductos = ["Yerba", "Azucar", "Leche", "Huevo", "Pan Rallado", "Mermelada", "Queso Cremoso", "Facturas", "Galletitas", "Pan", "Gaseosa", "Agua Saborizada", "Cerveza"];
+const nombreProductos = ["Yerba", "Azucar", "Leche", "Huevo", "Pan Rallado", "Mermelada", "Muzzarella", "Facturas", "Galletitas", "Pan", "Gaseosa", "Jugo", "Cerveza"];
 
 const descripcionProductos = ["Andresito x 1Kg", "La Otamendi x 1Kg", "Higuain x 1Lt", "Doble Dibu x Docena", "Mac Callister x 1Kg", "Alvarez x 500Gr", "La Scaloneta x 1Kg", "Variedades x Doc", "El Cuty x 500Gr", "El Pampa Messi x 500Ml", "Toros x 1Lt", "Aimar x 1Lt","El Marcherano x 470Ml" ];
 

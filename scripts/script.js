@@ -1,6 +1,6 @@
 const ofertasNombres = ["Promo Cafecito", "Promo Almuerzo", "Promo Merienda"];
 
-const ofertasDescripcion = ["Leche en polvo + Cafe Instantaneo x2 + Azucar", "Arroz + Fideos x2 + Polenta", "Galletitas a Eleccion + Chocolatada x 2"];
+const ofertasDescripcion = ["Leche + Cafe Instantaneo x2 + Azucar", "Arroz + Fideos x2 + Polenta", "Galletitas a Eleccion + Chocolatada x 2"];
 
 const ofertasPrecios = [10000, 6000, 7000];
 
