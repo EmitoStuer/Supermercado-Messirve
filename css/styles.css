@@ -415,7 +415,7 @@ form {
     margin-left: 12px;
     border-radius: 10px;
     margin-right: 10px;
-}
+    }
 
 .apellido { 
 
@@ -449,6 +449,21 @@ form {
     height: 25px;
     border: 1px solid black;
     border-radius: 10px;
+}
+
+.contenedorImagen {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+
+}
+
+
+.quienesSomos {
+    width: 1700px;
+    height: 200px;
+    border-radius: 25px;
 }
 
 body {
