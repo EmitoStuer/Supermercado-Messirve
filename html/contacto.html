@@ -29,27 +29,27 @@
     <main>
      
     <div class="contenidoContacto">
-        <form action="../index.html">
+        <form id="miFormulario" action="../index.html">
             <h2>Escribinos</h2>
             <div  class="div">
                 <label for="nombre">Nombre:</label>
-                <input class="nombre" type="text" id="nombre" placeholder="Nombre">
+                <input class="nombre" type="text" id="nombre" placeholder="Nombre" required>
     
                 <label for="apellido">Apellido:</label>
-                <input class="apellido" type="text" id="apellido" placeholder="Apellido">
+                <input class="apellido" type="text" id="apellido" placeholder="Apellido" required>
             </div>
             <div class="div">
                 <label for="email">Correo Electronico:</label>
-            <input  class="email" type="email" id="email" placeholder="Correo Electronico"> 
+            <input  class="email" type="email" id="email" placeholder="Correo Electronico" required> 
             </div>
             <div class="div">
                 <label for="number">Telefono:</label>
-                <input  class="number" type="number" id="number" placeholder="Telefono"> 
+                <input  class="number" type="number" id="number" placeholder="Telefono" required> 
                 </div>
                 <label for="mensaje">Envianos tu comentario:</label>
                 <div class="div">
                     
-                    <input class="cajaComentario" type="text" id="comentario" placeholder="Escribi tu comentario...">
+                    <input class="cajaComentario" type="text" id="comentario" placeholder="Escribi tu comentario..." required>
             </div>
 
             <button type="submit" class="botonEnviar" id="enviar">Enviar</button>
