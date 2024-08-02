@@ -9,6 +9,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 
 }
@@ -94,6 +95,8 @@ header>h1 {
 
 }
 
+/* ------------------------------------------------ */
+
 .ofertas {
     height: flex;
     width: 100%;
@@ -137,6 +140,8 @@ header>h1 {
     background-color: gray;
 }
 
+/* ------------------------------------------------ */
+
 .historia {
     height: 400px;
     width: 100%;
@@ -175,6 +180,8 @@ header>h1 {
     visibility: hidden;
 }
 
+/* ------------------------------------------------ */
+
 
 .imagenes {
     height: 400px;
@@ -195,7 +202,7 @@ header>h1 {
     border-radius: 15px;
     opacity: 100%;
 }
-
+/* ------------------------------------------------ */
 footer {
     display: flex;
     border: 1px solid rgb(0, 0, 0);
@@ -217,7 +224,7 @@ footer {
     margin-top: 2%;
     color: rgb(250, 235, 215);
 }
-
+/* ------------------------------------------------ */
 .card{
     background-color: rgb(0, 183, 255);
     width: 30%;
@@ -320,6 +327,8 @@ footer {
     background-color: rgb(128, 128, 128);
 }
 
+/* ------------------------------------------------ */
+
 .historia:hover {
     height: 400px;
     width: 100%;
@@ -345,6 +354,8 @@ footer {
 .historia:hover >p{
     visibility: visible;
 }
+
+/* ------------------------------------------------ */
 
 .contenidoContacto {
     height: 600px;
@@ -483,8 +494,4 @@ form {
     border-radius: 25px;
 }
 
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
- 
-}
 
