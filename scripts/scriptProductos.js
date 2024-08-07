@@ -4,14 +4,14 @@ const descripcionProductos = ["Andresito x 1Kg", "La Otamendi x 1Kg", "Higuain x
 
 const preciosProductos = [3000, 2000, 1500, 2000, 1000, 1500, 5000, 2500, 1200, 1500, 2000, 2000, 2000];
 
-const stockProductos = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
+const stockProductos = [8, 11, 20, 10, 13, 24, 2, 6, 40, 30, 53, 28, 13];
 
 const productosImagenes = ["../imagenes/yerba.jpg", "../imagenes/azucar.jpg", "../imagenes/leche.jpg", "../imagenes/huevos.jpg", "../imagenes/panRallado.jpg", "../imagenes/mermelada.jpg", "../imagenes/quesoCremoso.jpg", "../imagenes/facturas.jpg", "../imagenes/galletitas.jpg", "../imagenes/pan.jpg", "../imagenes/gaseosa.jpg", "../imagenes/aguaSaborizada.jpg", "../imagenes/cerveza.jpg"];
 
 const descripcionImagenes = ["Imagen de yerba", "Imagen de azucar", "Imagen de leche", "Imagen de huevos", "Imagen de pan rallado", "Imagen de mermelada", "Imagen de queso cremoso", "Imagen de facturas", "Imagen de galletitas", "Imagen de pan", "Imagen de jpg", "Imagen de agua saborizada", "Imagen de cerveza"];
 
 for (let i = 0; i < nombreProductos.length; i++) {
-    cargarOfertas(nombreProductos[i], descripcionProductos[i], preciosProductos[i], stockProductos[i], productosImagenes[i],descripcionImagenes[i],i);
+    cargarProductos(nombreProductos[i], descripcionProductos[i], preciosProductos[i], stockProductos[i], productosImagenes[i],descripcionImagenes[i],i);
 }   
     let contenedorTotal = document.getElementById("ofertas");
     let nuevoElementoDivFinal = document.createElement("div");
@@ -37,7 +37,7 @@ for (let i = 0; i < nombreProductos.length; i++) {
 
     
 
-function cargarOfertas(nombre, descripcion, precio, stock, imagen, descripcionImagen, index) {
+function cargarProductos(nombre, descripcion, precio, stock, imagen, descripcionImagen, index) {
 
     let contenedorOfertas = document.getElementById("ofertas");
 
@@ -112,18 +112,24 @@ function agregarProductos(e){
     let cantidadSeleccionada = inputSeleccionado.value;
         let precioUnidad = preciosProductos[idProducto];
         if (cantidadSeleccionada>0){
-
-            if (cantidadSeleccionada<=stockProductos[idProducto]){
-                stockProductos[idProducto]-=cantidadSeleccionada;
-                inputSeleccionado.setAttribute("placeholder",`Quedan: ${stockProductos[idProducto]}`);
-                total = total + (precioUnidad*cantidadSeleccionada);
-                let precioTotal = document.getElementById("precioTotal");
-                precioTotal.innerText= "Total: $"+total;
-                inputSeleccionado.value = "";
-            }else{
-                alert ("No hay stock suficiente")
-                inputSeleccionado.value = "";
-            }
+            if (/^\d+$/.test(cantidadSeleccionada)) {
+                if (cantidadSeleccionada<=stockProductos[idProducto]){
+                    stockProductos[idProducto]-=cantidadSeleccionada;
+                    inputSeleccionado.setAttribute("placeholder",`Quedan: ${stockProductos[idProducto]}`);
+                    total = total + (precioUnidad*cantidadSeleccionada);
+                    let precioTotal = document.getElementById("precioTotal");
+                    precioTotal.innerText= "Total: $"+total;
+                    inputSeleccionado.value = "";
+                }else{
+                    alert ("No hay stock suficiente")
+                    inputSeleccionado.value = "";
+                }
+            } else {
+                alert ("Ingrese numeros enteros")
+                    inputSeleccionado.value = "";
+            }    
+                
+           
         }else{
             alert("Ingrese cantidad Mayor que cero");
             inputSeleccionado.value = "";
